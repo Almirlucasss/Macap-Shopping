@@ -1,0 +1,287 @@
+/* Tema de Cores */
+:root {
+    --primary-color: #1b3562;
+    --secondary-color: #004b99;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --hover-color: #0055b3;
+  }
+  
+  /* Reset Básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Corpo e Tipografia */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  header .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  header .logo img {
+    height: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    border-radius: 5px;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Banner Principal */
+  .banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  /* Botões de navegação */
+  button.prev,
+  button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
+  button.prev:hover,
+  button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Seção Lojas Parceiras */
+  #lojas {
+    padding: 40px;
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  
+  .parceiros img {
+    width: 200px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Seção Categorias */
+  #categorias {
+    background-color: var(--background-color);
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #categorias h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .categorias-itens {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .categoria {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .categoria:hover {
+    background-color: var(--hover-color);
+  }
+  
+  /* Seção Cinema */
+  #cinema {
+    padding: 40px 0;
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  
+  #cinema h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .filmes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .filme {
+    width: 250px;
+    text-align: center;
+  }
+  
+  .filme img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .filme p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--text-color);
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-info p {
+    margin: 5px 0;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .carousel-inner-lojas {
+      flex-direction: column;
+    }
+  
+    .carousel-inner-lojas img {
+      max-width: 100%;
+    }
+  
+    .categorias-itens {
+      flex-direction: column;
+    }
+  
+    .parceiros img {
+      width: 150px;
+    }
+  
+    .filmes {
+      flex-direction: column;
+    }
+  }
+  /* Carrossel Lojas */
+  .carousel-lojas {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .carousel-inner img {
+    border-radius: 10px;
+    max-height: 400px; /* Ajuste a altura conforme necessário */
+    object-fit: cover; /* Garante que as imagens sejam ajustadas */
+  }
+  
+  .carousel-caption h5 {
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .carousel-caption p {
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .logo-section img {
+    max-width: 150px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .parceiros img {
+    width: 200px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  .container-lojas-parceiras{
+    width: 50%;
+    padding: 12px;
+    text-align: start;
+    gap: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+  .lista-info-parceiros{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .container-contato {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-contato {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  

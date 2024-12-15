@@ -107,18 +107,6 @@ button.next:hover {
   text-align: center;
 }
 
-#lojas h2 {
-  /* Logo no título "Nossas Lojas" */
- 
-  width: 25px; /* Ajuste o tamanho conforme necessário */
-  vertical-align: middle;
-  margin-right: 10px;
-
-
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
 .parceiros img {
   width: 200px;
   margin: 15px;
